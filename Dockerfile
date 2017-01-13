@@ -25,7 +25,7 @@ RUN yum install -y lighttpd && \
 # to make it clear why the following COPY operation is happening
 LABEL io.openshift.s2i.scripts-url=image:///usr/local/sti
 # Copy the S2I scripts from ./.sti/bin/ to /usr/local/sti
-COPY ./.sti/bin/ /usr/local/sti
+COPY ./.s2i/bin/ /usr/local/sti
 
 # Copy the lighttpd configuration file
 COPY ./etc/ /opt/app-root/etc
